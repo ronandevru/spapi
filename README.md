@@ -18,7 +18,7 @@ spapi.getLastChatMessages(1 /*Максимальное кол-во сообще�
 }).catch(err => console.errror(err));
 ```
 Пример вывода:
-```json
+```
 [{
 	sender: {
 		nickname: 'Steve',
@@ -39,7 +39,7 @@ spapi.getOnlinePlayers().then({ players, count, max } => {
 }).catch(err => console.errror(err));
 ```
 Пример вывода:
-```json
+```
 {
 	players: [{
 		nickname: 'Steve',
@@ -61,7 +61,7 @@ spapi.getServerTime().then({ timeOfDay, ticks, formated } => {
 }).catch(err => console.errror(err));
 ```
 Пример вывода:
-```json
+```
 {
 	timeOfDay: 'DAY',
 	ticks: 6000,
