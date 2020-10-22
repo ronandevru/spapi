@@ -1,0 +1,15 @@
+{
+  "name": "spapi",
+  "version": "1.0.0",
+  "description": "SPApi JS library",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ronandevru",
+  "license": "MIT",
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  }
+}
