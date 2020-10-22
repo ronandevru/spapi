@@ -8,7 +8,7 @@ npm i spapi --save
 ```
 ### Использование
 ```javascript
-const spapi = require('spapi').SPm; //SPm - сервер #СПм.
+const spapi = require('spapi.js').SPm; //SPm - сервер #СПм.
 ```
 #### Получение сообщений в чате
 ```javascript
