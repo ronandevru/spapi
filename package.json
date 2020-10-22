@@ -1,5 +1,5 @@
 {
-  "name": "spapi",
+  "name": "spapi.js",
   "version": "1.0.0",
   "description": "SPApi JS library",
   "main": "index.js",

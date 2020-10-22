@@ -1,4 +1,4 @@
-declare module 'spapi' {
+declare module 'spapi.js' {
    interface SPm {
       getLastChatMessages(limit: number): Promise<ChatMessage[]>;
       getOnlinePlayers(): Promise<{
