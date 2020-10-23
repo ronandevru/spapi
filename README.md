@@ -18,14 +18,14 @@ spapi.getLastChatMessages(1 /*Максимальное кол-во сообще�
 }).catch(err => console.errror(err));
 ```
 Пример вывода:
-```
+```json
 [{
-	sender: {
-		nickname: 'Steve',
-		uuid: '8667ba71-b85a-4004-af54-457a9734eed7'
+	"sender": {
+		"nickname": "Steve",
+		"uuid": "8667ba71-b85a-4004-af54-457a9734eed7"
 	},
-	text: 'HelloWorld',
-	time: 1600000000
+	"text": "HelloWorld",
+	"time": 1600000000
 }]
 ```
 
@@ -39,14 +39,14 @@ spapi.getOnlinePlayers().then({ players, count, max } => {
 }).catch(err => console.errror(err));
 ```
 Пример вывода:
-```
+```json
 {
-	players: [{
-		nickname: 'Steve',
-		uuid: '8667ba71-b85a-4004-af54-457a9734eed7'
+	"players": [{
+		"nickname": "Steve",
+		"uuid": "8667ba71-b85a-4004-af54-457a9734eed7"
 	}],
-	count: 1,
-	max: 69
+	"count": 1,
+	"max": 69
 }
 ```
 
@@ -61,11 +61,11 @@ spapi.getServerTime().then({ timeOfDay, ticks, formated } => {
 }).catch(err => console.errror(err));
 ```
 Пример вывода:
-```
+```json
 {
-	timeOfDay: 'DAY',
-	ticks: 6000,
-	formated: 12000
+	"timeOfDay": "DAY",
+	"ticks": 6000,
+	"formated": "12:00"
 }
 ```
 
