@@ -13,7 +13,7 @@ export namespace SPm {
  interface ChatMessage {
     sender: Player,
     text: string;
-    time: Date;
+    time: number;
  }
  
  type ServerWeather = 'CLEAR' | 'RAIN' | 'THUNDER';
