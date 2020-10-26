@@ -3,10 +3,10 @@ const fetch = require('node-fetch');
 async function get(route) {
    try {
       const res = await ( await fetch('https://sp-api.ru/spm/'+route) ).json()
-      if (res.error) throw 'Request Error';
+      if (res.error) throw new Error('Request Error');
       return res;
    }catch(err) {
-      throw 'Server Error. Request failed '+err.code;
+      throw err;
    }
 }
 

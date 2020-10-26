@@ -1,6 +1,6 @@
 {
   "name": "spapi.js",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "SPApi JS library",
   "main": "index.js",
   "types": "index.d.ts",
