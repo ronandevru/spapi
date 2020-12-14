@@ -1,3 +1,5 @@
 test/
 .git
 .gitignore
+.eslintrc.js
+tsconfig.json

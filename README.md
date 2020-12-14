@@ -3,12 +3,14 @@
 - #СПм
 
 ### Установка
-```
-npm i spapi.js --save
-```
+`npm i spapi.js` или `yarn install spapi.js`
 ### Использование
 ```javascript
 const spapi = require('spapi.js').SPm; //SPm - сервер #СПм.
+```
+Или ES6 import
+```typescript
+import { SPm as spapi } from 'spapi.js';
 ```
 #### Получение сообщений в чате
 ```javascript
