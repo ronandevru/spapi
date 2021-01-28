@@ -3,7 +3,7 @@
 - #СПм
 
 ### Установка
-`npm i spapi.js` или `yarn install spapi.js`
+`npm i spapi.js` или `yarn add spapi.js`
 ### Использование
 ```javascript
 const spapi = require('spapi.js').SPm; //SPm - сервер #СПм.
