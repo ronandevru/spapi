@@ -3,3 +3,4 @@ test/
 .gitignore
 .eslintrc.js
 tsconfig.json
+src
