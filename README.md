@@ -4,6 +4,9 @@
 
 ### Установка
 `npm i spapi.js` или `yarn add spapi.js`
+
+***Рекомендуем использовать [Yarn](https://yarnpkg.com/)***
+
 ### Использование
 ```javascript
 const spapi = require('spapi.js').SPm; //SPm - сервер #СПм.
@@ -12,6 +15,7 @@ const spapi = require('spapi.js').SPm; //SPm - сервер #СПм.
 ```typescript
 import { SPm as spapi } from 'spapi.js';
 ```
+
 #### Получение сообщений в чате
 ```javascript
 spapi.getLastChatMessages(1 /*Максимальное кол-во сообщений 1-50 (не обязательно)*/).then(messages => {
@@ -33,7 +37,7 @@ spapi.getLastChatMessages(1 /*Максимальное кол-во сообще�
 
 #### Получение игроков онлайн
 ```javascript
-spapi.getOnlinePlayers().then({ players, count, max } => {
+spapi.getOnlinePlayers().then(({ players, count, max }) => {
 	//players - Массив игроков онлайн
 	//count - Кол-во игроков (= players.length)
 	//max - Максимальное кол-во игроков
@@ -54,7 +58,7 @@ spapi.getOnlinePlayers().then({ players, count, max } => {
 
 #### Получение времени на сервере
 ```javascript
-spapi.getServerTime().then({ timeOfDay, ticks, formated } => {
+spapi.getServerTime().then(({ timeOfDay, ticks, formated }) => {
 	//timeOfDay - 'DAY' или 'NIGHT'
 	//ticks - Время в тиках
 	//formated - Время в 24 часовом формате
@@ -73,7 +77,7 @@ spapi.getServerTime().then({ timeOfDay, ticks, formated } => {
 
 #### Получение погоды на сервере
 ```javascript
-spapi.getServerWeather().then(weather => {
+spapi.getServerWeather().then((weather) => {
 	//weather - 'CLEAR', 'RAIN' или 'THUNDER'
 	console.log(weather);
 }).catch(err => console.errror(err));
