@@ -35,27 +35,25 @@ const createServer = (name: 'spm') => ({
   getLastChatMessages: async (limit = 50): Promise<ChatMessage[]> => {
     const { messages } = await get(name, 'chat');
     if (messages.length > limit) messages.length = limit;
-    for (let i = 0; i < messages.length; i++) {
-      messages[i] = {
-        sender: {
-          nickname: messages[i].name,
-          uuid: messages[i].uuid
-        },
-        text: messages[i].message,
-        time: Math.round(Number(messages[i].time) / 1000)
-      };
-    }
-    return messages;
+    return messages.map(({ name, uuid, message, time }: { name: string; uuid: string; message: string; time: string }) => ({
+      sender: {
+        nickname: name,
+        uuid
+      },
+      text: message,
+      time: Math.round(Number(time) / 1000)
+    }));
   },
   getOnlinePlayers: async (): Promise<OnlinePlayers> => {
     const { players, count, max } = await get(name, 'online');
-    for (let i = 0; i < players.length; i++) {
-      players[i] = {
-        nickname: players[i].nick,
-        uuid: players[i].uuid
-      };
-    }
-    return { players, count, max };
+    return {
+      players: players.map(({ nick, uuid }: { nick: string; uuid: string }) => ({
+        nickname: nick,
+        uuid
+      })),
+      count,
+      max
+    };
   },
   getServerTime: async (): Promise<ServerTime> => {
     const { time, ticks } = await get(name, 'time');
@@ -68,4 +66,5 @@ const createServer = (name: 'spm') => ({
     return weather;
   }
 });
+
 export const SPm = createServer('spm');
